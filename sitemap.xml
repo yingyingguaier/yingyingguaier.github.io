@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/about/</loc>
+    <lastmod>2020-04-09T02:06:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-04-09T02:20:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/%E9%87%8D%E7%82%B9%E6%BC%8F%E6%B4%9E/</loc>
+    <lastmod>2020-04-09T02:06:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/atlassian_jira%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9Ecve-2019-11581/</loc>
+    <lastmod>2020-02-03T17:17:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/fastjson/</loc>
+    <lastmod>2020-02-20T11:59:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/fastjson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C1.2.48%E4%BB%A5%E4%B8%8Bautotype%E7%BB%95%E8%BF%87/</loc>
+    <lastmod>2020-02-20T11:59:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/jira/</loc>
+    <lastmod>2020-02-03T17:42:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/jira-%E6%8F%92%E4%BB%B6ssrfcve-2017-9505/</loc>
+    <lastmod>2020-02-03T17:42:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/tomcat/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/tomcat-ajp%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9Ecve-2020-1938/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/%E9%87%8D%E7%82%B9%E6%BC%8F%E6%B4%9E/</loc>
+    <lastmod>2020-03-02T18:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E5%AE%89%E8%A3%85ios%E6%97%A7%E7%89%88%E6%9C%ACapp/</loc>
+    <lastmod>2020-01-31T15:14:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E4%B8%8E%E6%8F%90%E6%9D%83/</loc>
+    <lastmod>2020-01-30T13:59:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/postgresql/</loc>
+    <lastmod>2020-01-29T22:49:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/postgresql%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/</loc>
+    <lastmod>2020-01-29T22:49:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/sql%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-31T19:41:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/regeorg&#43;proxifier%E6%B8%97%E9%80%8F%E5%86%85%E7%BD%91/</loc>
+    <lastmod>2020-01-30T13:31:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/</loc>
+    <lastmod>2020-01-30T13:44:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/</loc>
+    <lastmod>2020-01-30T14:10:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%BC%8F%E6%B4%9E/</loc>
+    <lastmod>2020-01-30T14:10:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E/</loc>
+    <lastmod>2020-01-30T14:10:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/</loc>
+    <lastmod>2020-01-30T13:48:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2020-01-30T13:48:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/cms/</loc>
+    <lastmod>2020-01-30T13:22:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/metinfos/</loc>
+    <lastmod>2020-01-29T16:11:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/metinfos%E5%AE%9E%E6%88%98/</loc>
+    <lastmod>2020-01-29T16:11:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/dedecms/</loc>
+    <lastmod>2020-01-29T23:39:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/dedecms-v5.7-sp2%E5%90%8E%E5%8F%B0sys_info-getshell/</loc>
+    <lastmod>2020-01-29T23:33:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/dedecms%E6%9F%A5%E6%89%BE%E5%90%8E%E5%8F%B0%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2020-01-29T23:39:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2020-01-30T13:50:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB/</loc>
+    <lastmod>2020-01-30T13:50:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/php/</loc>
+    <lastmod>2020-01-30T13:25:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/php%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E4%B8%8E%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</loc>
+    <lastmod>2020-01-30T13:25:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/php-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%88%A9%E7%94%A8/</loc>
+    <lastmod>2020-01-30T13:18:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/modsecurity/</loc>
+    <lastmod>2020-01-29T16:03:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2020-01-29T19:53:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-01-30T13:44:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/sqli-labs/</loc>
+    <lastmod>2020-01-31T19:41:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-65-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%964-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-31T19:41:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/categories/%E9%9D%B6%E5%9C%BA/</loc>
+    <lastmod>2020-01-31T19:41:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-64-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%963-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-63-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%962-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-62-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%961-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-61-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%964-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-60-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%963-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-59-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%962-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-58-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%961-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-57-get-union-%E5%8F%98%E5%8C%964-%E4%BB%85%E5%85%81%E8%AE%B814%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-56-get-union-%E5%8F%98%E5%8C%963-%E4%BB%85%E5%85%81%E8%AE%B814%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-55-get-union-%E5%8F%98%E5%8C%962-%E4%BB%85%E5%85%81%E8%AE%B814%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:51:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/2008r2%E5%9F%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2020-01-29T15:58:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/%E4%B8%AD%E9%97%B4%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2020-01-30T14:05:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-54-get-union-%E5%8F%98%E5%8C%961-%E4%BB%85%E5%85%81%E8%AE%B810%E6%AC%A1%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2020-01-25T23:52:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-53-get-%E7%9B%B2%E6%B3%A8-%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-52-get-%E7%9B%B2%E6%B3%A8-%E6%95%B0%E5%AD%97%E5%9E%8B%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-51-get-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-26T00:21:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-50-get-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E6%95%B0%E5%AD%97%E5%9E%8B%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-49-get-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E5%AD%97%E7%AC%A6%E5%9E%8B%E7%9B%B2%E6%B3%A8-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/upload-labs/</loc>
+    <lastmod>2020-01-30T13:37:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/upload-labs%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-01-30T13:37:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
+    <lastmod>2020-01-30T13:37:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-48-get-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E6%95%B0%E5%AD%97%E5%9E%8B%E7%9B%B2%E6%B3%A8-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-47-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E5%AD%97%E7%AC%A6%E5%9E%8B-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-46-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E6%95%B0%E5%AD%97%E5%9E%8B-orderby%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:52:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-45-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E5%AD%97%E7%AC%A6%E5%9E%8B-%E5%A0%86%E5%8F%A0%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-26T00:20:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/phpcms/</loc>
+    <lastmod>2020-01-30T13:22:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/phpcms%E6%A1%86%E6%9E%B6sql%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-30T13:22:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-44-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E5%AD%97%E7%AC%A6%E5%9E%8B-%E5%A0%86%E5%8F%A0%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-25T23:52:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-43-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E5%AD%97%E7%AC%A6%E5%9E%8B-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5%E5%8F%98%E5%BD%A2/</loc>
+    <lastmod>2020-01-26T00:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-42-post%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5-%E5%AD%97%E7%AC%A6%E5%9E%8B-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:53:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-41-get%E7%9B%B2%E6%B3%A8-%E6%95%B4%E5%9E%8B-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:53:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/csrf/</loc>
+    <lastmod>2020-01-27T22:36:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/dvwa/</loc>
+    <lastmod>2020-01-27T22:39:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/dvwa-csrf%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2020-01-27T22:36:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-40-get%E7%9B%B2%E6%B3%A8-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5-%E5%AD%97%E7%AC%A6%E5%9E%8B/</loc>
+    <lastmod>2020-01-25T23:53:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-39-get-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5-%E6%95%B4%E5%9E%8B/</loc>
+    <lastmod>2020-01-25T23:53:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-38-get-%E5%A0%86%E5%8F%A0%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-26T00:01:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-37-post-%E7%BB%95%E8%BF%87mysql-real-escape-string/</loc>
+    <lastmod>2020-01-26T00:17:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-36-get-%E7%BB%95%E8%BF%87mysql-real-escape-string/</loc>
+    <lastmod>2020-01-26T00:14:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-35-get-%E4%B8%8D%E9%9C%80%E8%A6%81%E7%BB%95%E8%BF%87addslashes-%E6%95%B4%E5%9E%8B/</loc>
+    <lastmod>2020-01-25T23:53:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-34-post-%E7%BB%95%E8%BF%87addslashes/</loc>
+    <lastmod>2020-01-26T00:14:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-33-get-%E7%BB%95%E8%BF%87addslashes/</loc>
+    <lastmod>2020-01-26T00:13:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-32-get-%E7%BB%95%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%BB%A4%E5%99%A8-%E5%90%91%E5%8D%B1%E9%99%A9%E5%AD%97%E7%AC%A6%E6%B7%BB%E5%8A%A0%E6%96%9C%E6%9D%A0/</loc>
+    <lastmod>2020-01-25T23:54:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-31-get%E7%9B%B2%E6%B3%A8-%E9%98%BB%E6%8A%97%E4%B8%8D%E5%8C%B9%E9%85%8D-%E6%9C%89waf%E7%9A%84web%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2020-01-25T23:54:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-30-get%E5%9F%BA%E4%BA%8E%E7%9B%B2%E6%B3%A8-%E9%98%BB%E6%8A%97%E4%B8%8D%E5%8C%B9%E9%85%8D-%E6%9C%89waf%E7%9A%84web%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2020-01-25T23:54:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-29-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E9%98%BB%E6%8A%97%E4%B8%8D%E5%8C%B9%E9%85%8D-%E6%9C%89waf%E7%9A%84web%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2020-01-25T23:54:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/prompt-xss%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-01-30T13:29:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/xss/</loc>
+    <lastmod>2020-01-30T13:29:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/dvwa-xssdom%E5%9E%8B%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2020-01-27T22:38:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/dvwa-xss%E5%AD%98%E5%82%A8%E5%9E%8B%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2020-01-27T22:39:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/dvwa-xss%E5%8F%8D%E5%B0%84%E5%9E%8B%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2020-01-27T22:38:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/haozi-xss-demo%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-01-29T23:42:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-28a-get%E5%9F%BA%E4%BA%8E%E7%9B%B2%E6%B3%A8-%E4%BD%A0%E7%9A%84union%E5%92%8Cselect%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89-%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E6%8B%AC%E5%8F%B7/</loc>
+    <lastmod>2020-01-25T23:54:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-28-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E4%BD%A0%E7%9A%84union%E5%92%8Cselect%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89-%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E6%8B%AC%E5%8F%B7/</loc>
+    <lastmod>2020-01-25T23:54:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-27a-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E4%BD%A0%E7%9A%84union%E5%92%8Cselect%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89-%E5%8F%8C%E5%BC%95%E5%8F%B7/</loc>
+    <lastmod>2020-01-26T00:12:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-27-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E4%BD%A0%E7%9A%84union%E5%92%8Cselect%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89-%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%8D%95%E5%BC%95%E5%8F%B7/</loc>
+    <lastmod>2020-01-25T23:54:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-26a-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E4%BD%A0%E7%9A%84%E7%A9%BA%E6%A0%BC%E5%92%8C%E6%B3%A8%E9%87%8A%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89-%E5%AD%97%E7%AC%A6%E5%9E%8B-%E6%8B%AC%E5%8F%B7/</loc>
+    <lastmod>2020-01-25T23:54:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-26-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF-%E4%BD%A0%E7%9A%84%E7%A9%BA%E6%A0%BC%E5%92%8C%E6%B3%A8%E9%87%8A%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89/</loc>
+    <lastmod>2020-01-25T23:54:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-25a-get%E7%9B%B2%E6%B3%A8%E6%95%B4%E5%9E%8B%E5%8D%95%E5%BC%95%E5%8F%B7-%E4%BD%A0%E7%9A%84or%E5%8F%8Aand%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89/</loc>
+    <lastmod>2020-01-25T23:55:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-25-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E5%8D%95%E5%BC%95%E5%8F%B7-%E4%BD%A0%E7%9A%84or%E5%8F%8Aand%E5%BD%92%E6%88%91%E6%89%80%E6%9C%89/</loc>
+    <lastmod>2020-01-25T23:55:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-24-post%E4%BA%8C%E6%AC%A1%E6%8E%92%E5%BA%8F%E6%B3%A8%E5%85%A5-%E5%AD%98%E5%82%A8%E5%9E%8B%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:55:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-23-get%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84%E8%BF%87%E6%BB%A4%E6%B3%A8%E9%87%8A/</loc>
+    <lastmod>2020-01-25T23:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-22-base64%E7%BC%96%E7%A0%81%E5%8A%A0%E5%AF%86%E7%9A%84%E5%8F%8C%E5%BC%95%E5%8F%B7cookie%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:55:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-21-base64%E7%BC%96%E7%A0%81%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E6%8B%AC%E5%8F%B7%E7%9A%84cookie%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:55:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-20-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84cookie-uagent%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE%E5%A4%B4%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-26T00:02:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-19-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84referer%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE%E5%A4%B4%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-26T00:10:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-18-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84uagent%E5%AD%97%E6%AE%B5%E6%95%B0%E6%8D%AE%E5%A4%B4%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:55:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-17-post%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2020-01-25T23:55:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-16-post%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%B8%83%E5%B0%94%E5%9E%8B%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-26T00:08:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-15-post%E5%8D%95%E5%BC%95%E5%8F%B7%E5%B8%83%E5%B0%94%E5%9E%8B%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-26T00:25:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-14-post%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%8C%E6%B3%A8%E5%85%A5%E5%8F%98%E5%BD%A2/</loc>
+    <lastmod>2020-01-26T00:07:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-13-post%E5%8D%95%E5%BC%95%E5%8F%B7%E5%8F%8C%E6%B3%A8%E5%85%A5%E5%8F%98%E5%BD%A2/</loc>
+    <lastmod>2020-01-25T23:56:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-12-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84post%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-26T00:06:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-11-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84post%E5%8D%95%E5%BC%95%E5%8F%B7%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:56:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-10-get%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%9F%BA%E4%BA%8E%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-25T23:56:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-9-get%E5%8D%95%E5%BC%95%E5%8F%B7%E5%9F%BA%E4%BA%8E%E6%97%B6%E9%97%B4%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-25T23:41:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-8-get%E5%8D%95%E5%BC%95%E5%8F%B7%E5%B8%83%E5%B0%94%E5%9E%8B%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2020-01-26T00:23:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-7-%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:39:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-6-get%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8F%8C%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-5-get%E5%8D%95%E5%BC%95%E5%8F%B7%E5%8F%8C%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:33:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/tags/tcpdump/</loc>
+    <lastmod>2020-01-29T23:16:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/tcpdump%E4%BD%BF%E7%94%A8%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-01-29T23:16:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-4-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:25:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-3-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E5%8D%95%E5%BC%95%E5%8F%B7%E5%8F%98%E5%BD%A2%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:08:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/php%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2020-01-29T19:53:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-2-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E6%95%B4%E5%9E%8B%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:45:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.yingyingguaier.top/others/sqli-labs-lession-1-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E5%8D%95%E5%BC%95%E5%8F%B7%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2020-01-25T23:14:17+08:00</lastmod>
+  </url>
+  
+</urlset>

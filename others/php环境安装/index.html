@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" /><meta name="theme-color" content="#fff" />
+
+    
+        
+        
+        <script>
+            if (window.location.host == "www.yingyingguaier.top" && window.location.protocol != "https:") {
+                window.location.protocol = "https";
+            }
+        </script>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    
+    <meta name="renderer" content="webkit" />
+
+    <meta name="generator" content="Hugo 0.60.1" />
+
+    <title>Windows下PHP环境安装 | 柠萌C×篝火</title>
+
+    <link rel="stylesheet" href="/css/meme.min.f217594b2f7c00d93e5d9715a54f552875743a60d7b879b784b739465ad735b0.css" integrity="sha256-8hdZSy98ANk+XZcVpU9VKHV0OmDXuHm3hLc5RlrXNbA=" data-instant-track />
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Long+Cang|Noto+Serif+SC|Shadows+Into+Light|ZCOOL+XiaoWei&display=swap&subset=chinese-simplified" rel="stylesheet" />
+
+    <meta name="author" content="0menc" />
+    
+    
+    <meta name="description" content="windows下PHP环境的搭建 概述 windows下的PHP环境简称WAMP（win……" />
+    <meta name="keywords" content="环境搭建, others" />
+    
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="柠萌C×篝火" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="柠萌C×篝火" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://www.yingyingguaier.top/others/php%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" />
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2018-09-19T09:09:12+08:00",
+        "dateModified": "2020-01-29T19:53:44+08:00",
+        "url": "https://www.yingyingguaier.top/others/php%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/",
+        "headline": "Windows下PHP环境安装",
+        "description": "windows下PHP环境的搭建 概述 windows下的PHP环境简称WAMP（win……",
+        "keywords": "环境搭建, others",
+        "inLanguage" : "zh-CN",
+        "articleSection": "Others",
+        "wordCount":  2552 ,
+        "image": ["https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/001.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/002.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/003.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/004.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/005.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/006.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/007.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/008.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/009.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/010.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/011.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/012.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/013.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/014.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/015.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/016.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/017.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/018.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/019.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/020.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/021.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/022.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/023.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/024.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/025.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/026.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/027.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/028.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/029.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/030.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/031.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/032.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/033.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/034.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/036.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/035.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/037.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/038.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/039.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/040.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/041.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/042.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/043.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/044.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/045.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/046.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/047.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/048.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/049.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/050.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/051.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/052.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/053.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/054.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/055.png","https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/056.png"],
+        "author": {
+            "@type": "Person",
+            "description": "motto",
+            "email": "fastmast.fm@gmail.com",
+            "image": "https://www.yingyingguaier.top/icons/apple-touch-icon.png",
+            "url": "https://www.yingyingguaier.top/",
+            "name": "0menc"
+        },
+        "license": "在保留本文作者及本文链接的前提下，非商业用途随意转载分享。",
+        "publisher": {
+            "@type": "Organization",
+            "name": "柠萌C×篝火",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.yingyingguaier.top/icons/apple-touch-icon.png"
+            },
+            "url": "https://www.yingyingguaier.top/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://www.yingyingguaier.top/"
+        }
+    }
+</script>
+
+    
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<meta name="twitter:site" content="@0menc" />
+<meta name="twitter:creator" content="@0menc" />
+
+    
+
+
+
+
+
+
+<meta property="og:title" content="Windows下PHP环境安装" />
+<meta property="og:description" content="windows下PHP环境的搭建 概述 windows下的PHP环境简称WAMP（win……" />
+<meta property="og:url" content="https://www.yingyingguaier.top/others/php%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" />
+<meta property="og:site_name" content="柠萌C×篝火" />
+<meta property="og:locale" content="zh-CN" /><meta property="og:image" content="https://www.yingyingguaier.top/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/001.png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2018-09-19T09:09:12+08:00" />
+    <meta property="article:modified_time" content="2020-01-29T19:53:44+08:00" />
+    
+    <meta property="article:section" content="Others" />
+    <meta property="article:tag" content="环境搭建, others" />
+
+        
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '');
+    </script>
+
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        <div class="site-brand">
+            
+            <a href="/" class="brand">柠萌C×篝火</a>
+            
+        </div>
+    </header>
+
+
+            
+    <nav class="nav">
+        <ul class="menu" id="menu">
+            
+                
+            
+            
+            
+                <li class="menu-item"><a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon menu-item-icon"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/></svg><span class="menu-item-name">首页</span></a>
+                </li>
+            
+                <li class="menu-item active"><a href="/others/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon menu-item-icon"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon menu-item-icon"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon menu-item-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        </ul>
+    </nav>
+
+            
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        <article class="content post" data-align="justify" data-type="Others">
+
+            <h1 class="post-title">Windows下PHP环境安装</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2018-09-19T09:09:12+08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2018-09-19</time>
+    
+    
+    
+    
+        
+        
+            
+            
+                
+                
+                
+                
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                
+            
+            
+            
+                
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/others/" class="category-link">Others</a></span>
+            
+        
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2552</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;6&nbsp;分钟</span>
+    
+    
+</div>
+            
+
+            <div class="post-body"><h1 id="windowsphp"><a href="#windowsphp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>windows下PHP环境的搭建</h1>
+<hr>
+<h2 id="heading"><a href="#heading" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>概述</h2>
+<p>windows下的PHP环境简称WAMP（windows+Apache+MySQL+PHP）</p>
+<p>PHP的环境搭建需要安装Apache+MySQL+PHP,还需要进行相关配置。与集成开发环境相比,WAMP的过程相对繁琐,那么可以使用phpstudy这样的开发环境。</p>
+<p>下面MySQL数据库使用用MariaDB,它是MySQL源代码的一个分支,与MySQL使用基本相同,在MySQL被甲骨文收购后随时存在闭源的风险的情况下,他是一个很好的替代品。</p>
+<p>下载地址:</p>
+<ul>
+<li><a href="https://httpd.apache.org/download.cgi#apache24" target="_blank" rel="noopener">Apache</a></li>
+<li><a href="http://www.php.net/" target="_blank" rel="noopener">PHP</a></li>
+<li><a href="https://downloads.mariadb.org/" target="_blank" rel="noopener">MariaDB</a></li>
+</ul>
+<p>安装顺序按照Apache---&gt;PHP---&gt;MySQL进行。</p>
+<h2 id="heading1"><a href="#heading1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>安装包准备</h2>
+<h3 id="apache"><a href="#apache" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Apache</h3>
+<p>点击上面的下载地址进入Apache官网</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/001.png" alt="1" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/002.png" alt="2" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/003.png" alt="3" data-zoomable></p>
+<p>根据你的windows操作系统位数选择安装包</p>
+<h3 id="php"><a href="#php" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>PHP</h3>
+<p>点击上面的下载地址进入PHP官网</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/004.png" alt="4" data-zoomable></p>
+<p>选择最新版链接下载进入PHP官网</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/005.png" alt="5" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/006.png" alt="6" data-zoomable></p>
+<p>根据你的windows操作系统位数选择安装包</p>
+<h3 id="mariadb"><a href="#mariadb" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>MariaDB</h3>
+<p>点击上面的下载地址进入MariaDB官网</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/007.png" alt="7" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/008.png" alt="8" data-zoomable></p>
+<p>根据你的windows操作系统位数选择安装包</p>
+<h3 id="heading2"><a href="#heading2" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>结果</h3>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/009.png" alt="9" data-zoomable></p>
+<h2 id="apache-"><a href="#apache-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Apache 安装</h2>
+<blockquote>
+<p>将http开头的安装包解压,多出一个<code>Apache24</code>的文件夹</p>
+</blockquote>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/010.png" alt="10" data-zoomable></p>
+<blockquote>
+<p>将<code>Apache24</code>放在你想要放的任何位置,为了方便管理,我在C盘新建一个目录<code>WAMP</code>,把<code>Apache24</code>放进去。之后也把所有的安装放在这里</p>
+</blockquote>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/011.png" alt="11" data-zoomable></p>
+<p>进入到<code>Apache24\bin</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/012.png" alt="12" data-zoomable></p>
+<font color=red>
+​	将上图地址栏标记的的地址复制
+​	
+	`C:\WAMP\Apache24\bin`
+</font>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/013.png" alt="13" data-zoomable></p>
+<p>鼠标移到<code>cmd</code>上,右键以管理员身份运行</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/014.png" alt="14" data-zoomable></p>
+<p>输入<code>cd </code>(注意这有个空格) 并把刚才复制的<code>C:\WAMP\Apache24\bin</code>粘贴上去,回车运行</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/015.png" alt="15" data-zoomable></p>
+<p>可以看到路径改变了,再输入<code>httpd.exe -k install</code>,执行安装过程。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/016.png" alt="16" data-zoomable></p>
+<p>如果出现了上图的错误,是因为Win7系统是缺少了VC++2015组件,Win10系统就不会出现这个问题。</p>
+<p>cmd窗口先别关闭。点下面的连接下载组件</p>
+<p><a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=48145" target="_blank" rel="noopener">VC++2015组件</a></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/017.png" alt="17" data-zoomable></p>
+<p>我是Win7 32位系统就选择32位的(64位就选64位的),然后点next。</p>
+<p>把下载好的安装程序双击运行。同意安装直到安装成功。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/018.png" alt="18" data-zoomable></p>
+<p>重新输入<code>httpd.exe -k install</code>,你也可以按方向键的↑,它记录了历史输入,找到<code>httpd.exe -k install</code>后回车执行。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/019.png" alt="19" data-zoomable></p>
+<p>提示Apache2.4安装成功。</p>
+<p>安装成功后按Windows+R键,输入<code>services.msc</code>快捷打开系统服务。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/020.png" alt="20" data-zoomable></p>
+<p>找到<code>Apache2.4</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/021.png" alt="21" data-zoomable></p>
+<p>点击后右键属性修改启动类型为手动。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/022.png" alt="22" data-zoomable></p>
+<p>点击启动后,Apache2.4会运行。</p>
+<p>如果你出现和我下图一样的错误,可以查看解决办法,没有出现该问题可不看这步</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/023.png" alt="23" data-zoomable></p>
+<p>在我的安装目录<code>C:\WAMP\Apache24\bin</code>下有个<code>httpd.exe</code>,用cmd让他执行,它会提示错误信息。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/024.png" alt="24" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/025.png" alt="25" data-zoomable></p>
+<font color=red>
+错误原因:httpd.conf里面配置的ServerRoot路径跟实际路径不一致，导致路径无效。
+</font>
+<p>在你的安装路径的<code>Apache24\</code>底下有个<code>conf</code>文件夹,进入到该目录。有个<code>httpd.conf</code>文件。<code>httpd.conf</code>文件包含了Apache的配置。用编辑器打开<code>httpd.conf</code>,我用的是EditPlus,什么编辑器都没有的话就用自带的记事本打开。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/026.png" alt="26" data-zoomable></p>
+<p>找到提示错误的39行</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/027.png" alt="27" data-zoomable></p>
+<p>其实是38行需要修改,修改成如下图配置,它其实记录了<code>Apache24\</code>的路径,它默认配置是在C盘根目录的<code>Apache24\</code>,一旦你把<code>Apache24\</code>放在别的地方都需要改动这个配置。这里我添加上<code>C:\WAMP</code>,显示如下。也就是说如果你的路径在<code>D:\Apache24</code>下面就填<code>D:\Apache24</code>。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/028.png" alt="28" data-zoomable></p>
+<p>修改记得保存,启动Apache2.4成功</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/029.png" alt="29" data-zoomable></p>
+<p>随便打开个浏览器输入</p>
+<p><code>http://localhost/</code></p>
+<p>如果返回如下界面就表示配置成功,Apache这一关就算过了。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/030.png" alt="30" data-zoomable></p>
+<h2 id="php-"><a href="#php-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>PHP 安装及配置</h2>
+<h3 id="heading3"><a href="#heading3" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>解压</h3>
+<p>将php的压缩解压,当前目录下多出了php开头的文件夹,重命名为php后拷贝到<code>C:\WAMP</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/031.png" alt="31" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/032.png" alt="32" data-zoomable></p>
+<h3 id="heading4"><a href="#heading4" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>选择配置文件</h3>
+<p>双击进入php文件夹,有两个配置文件<code>php.ini-development</code>和<code>php.ini-production</code>。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/033.png" alt="33" data-zoomable></p>
+<p>要使用哪个就把文件名修改成<code>php.ini</code>就行。<code>php.ini-production</code>在参数配置上更具有安全性,适合产品上线使用,学习环境下使用<code>php.ini-development</code>就行了。这里将<code>php.ini-development</code>改成<code>php.ini</code>。</p>
+<p>用文本编辑器打开改名的<code>php.ini</code>。</p>
+<h3 id="heading5"><a href="#heading5" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>开启扩展模块</h3>
+<p>搜索<code>extension_dir</code>,大概在730行左右。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/034.png" alt="34" data-zoomable></p>
+<p>配置文件中<code>;</code>的作用是注释,要开启某个配置需要把开头的<code>;</code>去掉。
+这里配置的是php的扩展目录,该目录文件为PHP提供一些扩展的功能。可以查看下该目录。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/036.png" alt="36" data-zoomable></p>
+<p>将该路径复制到“”中,并把开头启注释作用的<code>;</code>去掉。这里的路径填写你自己的路径。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/035.png" alt="35" data-zoomable></p>
+<p>修改之后PHP就能找到扩展文件所在的目录了,但是这些找到的扩展文件没有启用,需要手动配置。现在启用mysql数据库扩展,在<code>php.ini</code>中搜索<code>mysqli</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/037.png" alt="37" data-zoomable></p>
+<p>大概在897行</p>
+<p><code>;extension=mysqli</code></p>
+<p>去掉<code>;</code>开启mysql数据库扩展</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/038.png" alt="38" data-zoomable></p>
+<p>保存并退出。</p>
+<h2 id="apache--php"><a href="#apache--php" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Apache 连接 PHP</h2>
+<h3 id="heading6"><a href="#heading6" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>概述</h3>
+<p>将Apache安装好和PHP安装配置好后并不表示Apache和PHP关联起来了,还要配置Apache的配置文件<code>httpd.conf</code>让Apache认识PHP。</p>
+<h3 id="apachephp"><a href="#apachephp" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Apache加载PHP模块</h3>
+<p>我的Apache配置文件在<code>C:\WAMP\Apache24\conf</code>下,用编辑器打开。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/039.png" alt="39" data-zoomable></p>
+<p>找到183行左右,这是加载模块的最后一行</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/040.png" alt="40" data-zoomable></p>
+<p>添加下面两句话</p>
+<p>LoadModule php7\_module "<font color=red>C:\WAMP\php</font>\php7apache2_4.dll"<p>
+<p>PHPIniDir "<font color=red>C:\WAMP</font>\php"<p>
+<p>红色部分修改为你的路径</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/041.png" alt="41" data-zoomable></p>
+<p>第一句话加载了PHP模块</p>
+<p>第二句添加了<code>php.ini</code>所在的目录</p>
+<h3 id="apachephp1"><a href="#apachephp1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>Apache解析PHP###</h3>
+<p>找435行左右</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/042.png" alt="42" data-zoomable></p>
+<p>添加</p>
+<p><code>AddHandler application/x-httpd-php .php</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/043.png" alt="43" data-zoomable></p>
+<p>保存并退出</p>
+<p>重新启动Apache</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/044.png" alt="44" data-zoomable></p>
+<h3 id="php1"><a href="#php1" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>测试是否正常解析PHP文件</h3>
+<p>进入<code>Apache24\</code>下的<code>htdocs</code>目录,新建一个<code>phpinfo.php</code>的php文件</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/045.png" alt="45" data-zoomable></p>
+<p>编辑<code>phpinfo.php</code>内容</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/046.png" alt="46" data-zoomable></p>
+<p><code>&lt;?php ​	phpinfo(); ?&gt;</code></p>
+<p>删除该目录下的<code>index.html</code>文件,因为它会妨碍目录显示。访问<code>localhost</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/047.png" alt="47" data-zoomable></p>
+<p>打开<code>phpinfo.php</code>文件,显示如下则解析成功。</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/048.png" alt="48" data-zoomable></p>
+<h2 id="mysql-"><a href="#mysql-" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>MYSQL 安装及测试</h2>
+<h3 id="mysql"><a href="#mysql" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>MYSQL安装</h3>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/049.png" alt="49" data-zoomable></p>
+<p>双击安装</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/050.png" alt="50" data-zoomable></p>
+<p>建立数据库用户,这里我建立账户名用户名都为root</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/051.png" alt="51" data-zoomable></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/052.png" alt="52" data-zoomable></p>
+<p>默认就行</p>
+<h3 id="heading7"><a href="#heading7" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>测试数据库是否安装成功</h3>
+<p>新建<code>mysql.php</code></p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/053.png" alt="53" data-zoomable></p>
+<p>下面的username填你刚才创建的用户名,password填你刚创建的密码。</p>
+<p>数据库测试代码:</p>
+<pre><code>&lt;?php
+    $servername = &quot;localhost&quot;;
+    $username = &quot;root&quot;;
+    $password = &quot;root&quot;;
+ 
+    // 创建连接
+    $conn = new mysqli($servername, $username, $password);
+ 
+    // 检测连接
+    if ($conn-&gt;connect_error) {
+        die(&quot;fail: &quot; . $conn-&gt;connect_error);
+    } 
+    echo &quot;success&quot;;
+?&gt;
+</code></pre>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/054.png" alt="54" data-zoomable></p>
+<p>双击运行</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/055.png" alt="55" data-zoomable></p>
+<p>返回success表示数据库安装成功</p>
+<p><img src="/images/PHP%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/056.png" alt="56" data-zoomable></p>
+</div>
+
+        </article>
+
+        
+
+        
+
+        
+    <div class="updated-badge-container"><div title="Updated @ 2020-01-29 19:53:44 CST" style="cursor:help;display:inline-block">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-01-29</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-01-29</text></g></svg></div></div>
+
+
+        
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/others/modsecurity/" class="related-link">ModSecurity</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/others/2008r2%E5%9F%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="related-link">2008R2域环境搭建</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>环境搭建</a>
+                
+            
+        </div>
+    
+
+
+        
+    <footer class="minimal-footer">
+        
+            
+            <div class="post-tag"><a href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="tag" class="post-tag-link">#环境搭建</a></div>
+        
+        
+            <div class="post-category">
+                <a href="/others/" class="post-category-link active">others</a> | <a href="/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" class="post-category-link">渗透测试</a> | <a href="/%E9%87%8D%E7%82%B9%E6%BC%8F%E6%B4%9E/" class="post-category-link">重点漏洞</a> | 
+            </div>
+        
+        
+    </footer>
+
+
+        
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/others/sqli-labs-lession-3-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E5%8D%95%E5%BC%95%E5%8F%B7%E5%8F%98%E5%BD%A2%E6%B3%A8%E5%85%A5/" rel="prev">< sqli-labs lession-3 基于错误的GET单引号变形注入</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/others/sqli-labs-lession-2-%E5%9F%BA%E4%BA%8E%E9%94%99%E8%AF%AF%E7%9A%84get%E6%95%B4%E5%9E%8B%E6%B3%A8%E5%85%A5/" rel="next">sqli-labs lession 2 (基于错误的GET整型注入) ></a>
+                </li>
+            
+        </ul>
+    
+
+
+        
+
+    </div>
+</main>
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+            
+        </div>
+        <script src="/js/meme.min.2c1054bb9f34ffed4c73e0352b46f19d70ee6b9948af9d7d464a19117675aee4.js" integrity="sha256-LBBUu580/+1Mc+A1K0bxnXDua5lIr519RkoZEXZ1ruQ=" data-no-instant></script>
+
+
+    <script data-no-instant>InstantClick.init();</script>
+
+
+    <script data-no-instant>
+        InstantClick.on('change', function () {
+            backToTop();
+        });
+    </script>
+
+
+<script data-no-instant>
+            InstantClick.on('change', function () {
+                gtag('config', '', {
+                    'page_path': location.pathname + location.search
+                });
+            });
+        </script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true
+    });
+</script>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom('[data-zoomable]', {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
